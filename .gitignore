@@ -1,0 +1,6 @@
+.gradle/
+.idea/inspectionProfiles/
+.idea/libraries/
+.idea/modules/
+build/
+out/
