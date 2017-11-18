@@ -9,11 +9,23 @@ import javax.ws.rs.core.MediaType;
 public class HealthcheckResource {
 
     @GET
-    //@Path("info")
+    @Path("ping")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getHealthcheckInfo() {
-        return "test";
+    public String getPing() {
+
+        return "ping";
     }
 
+    @GET
+    @Path("check")
+    @Produces(MediaType.APPLICATION_JSON)
+    public HealthcheckDO getCheck() {
 
+        boolean systemfunction = true;
+        //HashMap<String,String> map = new HashMap<>();
+        //map.put("bcwc", "OK");
+        String interfacename = "testinterface";
+        HealthcheckDO hcdo = new HealthcheckDO(systemfunction, interfacename);
+        return hcdo;
+    }
 }

@@ -1,5 +1,6 @@
 .gradle/
 .idea/inspectionProfiles/
+.idea/artifacts
 .idea/libraries/
 .idea/modules/
 build/
